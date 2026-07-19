@@ -15,13 +15,37 @@
     justify-content:center;
     width: 1.8rem;
     height: 1.8rem;
+    color: $light-color;
+    border-radius: 2em;
+    transition: color 0.35s, background 0.35s;
+
+    &:hover {
+      background: rgba($primary-color, 0.15);
+      color: $primary-color;
+    }
   }
 
   &.active {
     .page-link {
       color: $lightest-color;
-      border-radius: 2em;
       background: $primary-color;
+
+      &:hover {
+        background: $primary-color;
+        color: $lightest-color;
+      }
+    }
+  }
+
+  &.disabled {
+    .page-link {
+      color: $inactive-color;
+      cursor: not-allowed;
+
+      &:hover {
+        background: transparent;
+        color: $inactive-color;
+      }
     }
   }
 }

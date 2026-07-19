@@ -37,29 +37,16 @@ theme = "hugo-theme-m10c"
     url = "https://twitter.com/gohugoio"
   [[params.social]]
     icon = "brand-mastodon"
-    name = "Twitter"
+    name = "Mastodon"
     url = "https://twitter.com/gohugoio"
 
-  # Default theme
-  # [params.style]
-  #   darkestColor = "#242930"
-  #   darkColor = "#353b43"
-  #   lightColor = "#afbac4"
-  #   lightestColor = "#ffffff"
-  #   primaryColor = "#57cc8a"
-
-  # Green theme
-  # [params.style]
-  #   darkestColor = "#315659"
-  #   darkColor = "#253031"
-  #   lightColor = "#96a879"
-  #   lightestColor = "#fff"
-  #   primaryColor = "#dad865"
-
-  # Red theme
-  # [params.style]
-  #   darkestColor = "#d35050"
-  #   darkColor = "#212121"
-  #   lightColor = "#d6d6d6"
-  #   lightestColor = "#d3d3d3"
-  #   primaryColor = "#ffffff"
+  # New color scheme
+  [params.style]
+    darkestColor = "#1b1c20"
+    darkColor = "#232b38"
+    lightColor = "#b5b5b5"
+    lightestColor = "#ffffff"
+    primaryColor = "#05abc4"
+    secondaryColor = "#f35838"
+    inactiveColor = "#163b43"
+    lightBgColor = "#295258"

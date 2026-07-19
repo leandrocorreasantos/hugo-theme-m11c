@@ -1,13 +1,15 @@
 name = "m10c"
 license = "MIT"
 licenselink = "https://github.com/vaga/hugo-theme-m10c/blob/master/LICENSE.md"
-description = "A minimalistic (m10c) theme for bloggers"
+description = "A minimalistic (m10c) theme for bloggers — redesigned with Michroma font and new color palette"
 homepage = "https://github.com/vaga/hugo-theme-m10c"
-tags = ["blog", "minimalistic", "minimal", "responsive", "dark"]
+tags = ["blog", "minimalistic", "minimal", "responsive", "dark", "michroma", "modern"]
 features = [
   "minimalistic blog",
   "social icons",
-  "editable colors"
+  "editable colors",
+  "Michroma typography",
+  "accessible color scheme"
 ]
 
 [author]

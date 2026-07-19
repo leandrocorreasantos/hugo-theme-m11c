@@ -69,14 +69,17 @@ To change theme colors, add the following lines in `params`:
 
 ```
 [params.style]
-  darkestColor = "#d35050"
-  darkColor = "#212121"
-  lightColor = "#f5e3e0"
-  lightestColor = "#f5f5f5"
-  primaryColor = "#ffffff"
+  darkestColor = "#1b1c20"
+  darkColor = "#232b38"
+  lightColor = "#b5b5b5"
+  lightestColor = "#ffffff"
+  primaryColor = "#05abc4"
+  secondaryColor = "#f35838"
+  inactiveColor = "#163b43"
+  lightBgColor = "#295258"
 ```
 
-If you want the above theme colors, you can see the [exampleSite/config.toml](/exampleSite/config.toml) file.
+If you want to use the default theme colors, see the [exampleSite/config.toml](/exampleSite/config.toml) file.
 
 ### Icons
 

@@ -15,6 +15,21 @@
   padding: 2.5rem;
 }
 
+.app-header-menu {
+  margin: 1em 0;
+
+  .app-header-menu-item {
+    color: $primary-color;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:hover {
+      color: $lightest-color;
+    }
+  }
+}
+
 .app-header-social {
   display: flex;
   align-items: center;

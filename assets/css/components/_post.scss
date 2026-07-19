@@ -11,6 +11,7 @@
 
   > .icon {
     margin-right: 0.4em;
+    color: $secondary-color;
   }
 }
 
@@ -28,7 +29,7 @@
   }
 
   blockquote {
-    border-left: 0.4em solid rgba($primary-color, .8);
+    border-left: 0.4em solid $secondary-color;
     margin: 1em 0em;
     padding: .5em 1em;
     background: $darkest-color;
