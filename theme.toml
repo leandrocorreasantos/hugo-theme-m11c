@@ -1,8 +1,8 @@
-name = "m10c"
+name = "m11c"
 license = "MIT"
-licenselink = "https://github.com/vaga/hugo-theme-m10c/blob/master/LICENSE.md"
+licenselink = "https://github.com/leandrocorreasantos/hugo-theme-m11c/blob/master/LICENSE.md"
 description = "A minimalistic (m10c) theme for bloggers — redesigned with Michroma font and new color palette"
-homepage = "https://github.com/vaga/hugo-theme-m10c"
+homepage = "https://github.com/leandrocorreasantos/hugo-theme-m11c"
 tags = ["blog", "minimalistic", "minimal", "responsive", "dark", "michroma", "modern"]
 features = [
   "minimalistic blog",
@@ -13,5 +13,5 @@ features = [
 ]
 
 [author]
-  name = "vaga"
-  homepage = "https://vaga.io"
+  name = "leandrocorreasantos"
+  homepage = "https://leandrocorreasantos.github.io"

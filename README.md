@@ -1,8 +1,6 @@
-# m10c theme
+# m11c theme
 
-![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
-
-A Hugo minimalistic theme for bloggers
+A Hugo minimalistic theme for bloggers (m10c modified)
 
 Main features:
 
@@ -27,12 +25,12 @@ $ hugo new site [path]
 Clone this repository into `themes/` directory:
 ```bash
 $ cd [path]
-$ git clone https://github.com/vaga/hugo-theme-m10c.git themes/hugo-theme-m10c
+$ git clone https://github.com/leandrocorreasantos/hugo-theme-m11c.git themes/hugo-theme-m11c
 ```
 
 Add this line  in the `config.toml` file:
 ```toml
-theme = "hugo-theme-m10c"
+theme = "hugo-theme-m11c"
 ```
 
 ### Configuration
