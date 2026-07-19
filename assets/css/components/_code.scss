@@ -1,0 +1,136 @@
+// ---------------------------------------------------------------------------
+// Language-specific code formatting classes for Hugo syntax highlighting.
+// Each language gets a distinctive left-border accent color and a subtle
+// backdrop tint so readers can identify the language at a glance.
+//
+// Two selector aliases are provided for every language:
+//   .language-XXXX   → used automatically by Hugo Chroma on <code> elements
+//   .XXXX-code       → explicit class the user requested (e.g. .python-code)
+//
+// Usage in Hugo markdown:
+//   ```python
+//   print("hello")
+//   ```
+// Chroma renders: <div class="highlight"><pre><code class="language-python">…
+// The .language-python selector matches automatically.
+//
+// For manual wrapping (e.g. raw HTML / shortcode):
+//   <pre class="python-code"><code>…</code></pre>
+// ---------------------------------------------------------------------------
+
+// Mixin: generates both selectors with a shared colour palette entry.
+@mixin code-lang($lang, $border-color, $bg-tint: null) {
+  $base: &;
+
+  @if $bg-tint == null {
+    $bg-tint: rgba($border-color, 0.06);
+  }
+
+  // Hugo Chroma auto-class on the <code> element
+  :where(.language-#{$lang}) {
+    border-left: 0.25em solid $border-color;
+    padding-left: 0.5em;
+  }
+
+  // Explicit wrapper class (applied to <pre> or <div>)
+  :where(.#{$lang}-code) {
+    border-left: 0.4em solid $border-color;
+    background-color: $bg-tint;
+    padding: 1em;
+    border-radius: 0.2em;
+    overflow-x: auto;
+
+    code {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+}
+
+// ── Python ──
+@include code-lang("python",    #3572A5);
+@include code-lang("py",        #3572A5);   // common short alias
+
+// ── Go ──
+@include code-lang("go",        #00ADD8);
+@include code-lang("golang",    #00ADD8);
+
+// ── Java ──
+@include code-lang("java",      #ED8B00);
+
+// ── C / C++ ──
+@include code-lang("c",         #00599C);
+@include code-lang("cpp",       #004482);
+@include code-lang("c++",       #004482);
+@include code-lang("cxx",       #004482);
+@include code-lang("c-code",    #00599C);   // special-case for "c-code"
+@include code-lang("c++-code",  #004482);
+
+// ── C# ──
+@include code-lang("csharp",    #9B4993);
+@include code-lang("c#",        #9B4993);
+
+// ── JavaScript / TypeScript ──
+@include code-lang("javascript", #F7DF1E, rgba(#F7DF1E, 0.08));
+@include code-lang("js",         #F7DF1E, rgba(#F7DF1E, 0.08));
+@include code-lang("typescript", #3178C6);
+@include code-lang("ts",         #3178C6);
+@include code-lang("jsx",        #61DAFB);
+@include code-lang("tsx",        #3178C6);
+
+// ── Bash / Shell ──
+@include code-lang("bash",      #3E8635, rgba(#3E8635, 0.07));
+@include code-lang("sh",        #3E8635, rgba(#3E8635, 0.07));
+@include code-lang("shell",     #3E8635, rgba(#3E8635, 0.07));
+@include code-lang("zsh",       #3E8635, rgba(#3E8635, 0.07));
+
+// ── Markdown ──
+@include code-lang("markdown",  #083FA1);
+@include code-lang("md",        #083FA1);
+
+// ── Assembly ──
+@include code-lang("asm",       #6E4C13);
+@include code-lang("assembly",  #6E4C13);
+@include code-lang("nasm",      #6E4C13);
+
+// ── YAML ──
+@include code-lang("yaml",      #CB171E);
+@include code-lang("yml",       #CB171E);
+
+// ── XML / HTML ──
+@include code-lang("xml",       #E34F26, rgba(#E34F26, 0.07));
+@include code-lang("html",      #E34F26, rgba(#E34F26, 0.07));
+@include code-lang("xhtml",     #E34F26, rgba(#E34F26, 0.07));
+@include code-lang("svg",       #E34F26, rgba(#E34F26, 0.07));
+
+// ── PHP ──
+@include code-lang("php",       #777BB4);
+
+// ── BASIC ──
+@include code-lang("basic",     #008000, rgba(#008000, 0.07));
+
+// ── Rust ──
+@include code-lang("rust",      #DEA584, rgba(#DEA584, 0.08));
+@include code-lang("rs",        #DEA584, rgba(#DEA584, 0.08));
+
+// ── R ──
+@include code-lang("r",         #198CE7);
+
+// ── Elixir ──
+@include code-lang("elixir",    #4E2A8E);
+@include code-lang("ex",        #4E2A8E);
+@include code-lang("exs",       #4E2A8E);
+
+// ── SQL ──
+@include code-lang("sql",       #E38C00, rgba(#E38C00, 0.07));
+
+// ── Dart ──
+@include code-lang("dart",      #00B4AB);
+
+// ── Kotlin ──
+@include code-lang("kotlin",    #7F52FF, rgba(#7F52FF, 0.08));
+@include code-lang("kt",        #7F52FF, rgba(#7F52FF, 0.08));
+
+// ── Lua ──
+@include code-lang("lua",       #000080, rgba(#000080, 0.07));
