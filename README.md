@@ -17,6 +17,11 @@ Main features:
 
 ### Installation
 
+Requirements:
+
+- Hugo **0.158 or newer**
+- [Dart Sass](https://gohugo.io/functions/css/sass/#dart-sass) on your `PATH` (required by Hugo 0.170+, where the extended edition and LibSass were removed)
+
 Create a new Hugo site:
 ```bash
 $ hugo new site [path]
@@ -63,21 +68,9 @@ To add a social link, add the following lines in `params`:
   url = "https://github.com/vaga"
 ```
 
-To change theme colors, add the following lines in `params`:
-
-```
-[params.style]
-  darkestColor = "#1b1c20"
-  darkColor = "#232b38"
-  lightColor = "#b5b5b5"
-  lightestColor = "#ffffff"
-  primaryColor = "#05abc4"
-  secondaryColor = "#f35838"
-  inactiveColor = "#163b43"
-  lightBgColor = "#295258"
-```
-
-If you want to use the default theme colors, see the [exampleSite/config.toml](/exampleSite/config.toml) file.
+Theme colors are defined as SCSS variables at the top of `assets/css/main.scss`.
+To customize them in a site without editing the theme, override the generated
+rules in the site's `assets/css/_extra.scss` file (the theme imports it last).
 
 ### Icons
 
@@ -91,9 +84,12 @@ to all icons from the Simple Icons library. (e.g., brand-github, brand-x, brand-
 
 ### Styling
 
-To override styles using scss, add a file called `_extra.scss` to `[path]/assets/css/`
+To override styles using SCSS, add a file called `_extra.scss` to `[path]/assets/css/`.
+This file is imported after all theme styles, so it can override any rule.
 
-**Note:** Hugo releases come in two versions, `hugo` and `hugo_extended`. You need `hugo_extended` to automatically compile your scss.
+The theme compiles SCSS with Hugo's `css.Sass` function. Hugo 0.170 removed the
+`hugo_extended` edition and LibSass, so you must install
+[Dart Sass](https://gohugo.io/functions/css/sass/#dart-sass) locally and in CI.
 
 ## License
 

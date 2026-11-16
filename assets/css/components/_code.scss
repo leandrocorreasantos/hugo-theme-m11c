@@ -27,13 +27,13 @@
   }
 
   // Hugo Chroma auto-class on the <code> element
-  :where(.language-#{$lang}) {
+  :where([class~="language-#{$lang}"]) {
     border-left: 0.25em solid $border-color;
     padding-left: 0.5em;
   }
 
   // Explicit wrapper class (applied to <pre> or <div>)
-  :where(.#{$lang}-code) {
+  :where([class~="#{$lang}-code"]) {
     border-left: 0.4em solid $border-color;
     background-color: $bg-tint;
     padding: 1em;

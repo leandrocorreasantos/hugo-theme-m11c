@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 title = "Your title"
 themesDir = "../.."
-theme = "hugo-theme-m10c"
+theme = "hugo-theme-m11c"
 
 [pagination]
   pagerSize = 8
@@ -40,13 +40,3 @@ theme = "hugo-theme-m10c"
     name = "Mastodon"
     url = "https://twitter.com/gohugoio"
 
-  # New color scheme
-  [params.style]
-    darkestColor = "#1b1c20"
-    darkColor = "#232b38"
-    lightColor = "#b5b5b5"
-    lightestColor = "#ffffff"
-    primaryColor = "#05abc4"
-    secondaryColor = "#f35838"
-    inactiveColor = "#163b43"
-    lightBgColor = "#295258"
